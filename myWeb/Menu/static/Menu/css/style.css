@@ -1,0 +1,82 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+
+:root{
+    --colorList: #1a1b1f;
+    --colorManu: #28292d;
+    --colorHover: #808291; 
+    --colorText: #fff;
+    --colorSelected: #138808 ;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
+    text-decoration: none;
+    list-style: none;
+}
+
+header{
+    position: flex;
+    background-color: var(--colorManu);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 2%;
+    box-shadow: 0 0 20px var(--colorManu);
+} 
+
+header .logo{
+    color: var(--colorText);
+    font-weight: 600;
+    font-size: 22px;
+    transition: .5s;
+}
+
+header .logo:hover{
+    transform: scale(1.2);
+}
+
+header nav ul li{
+    position: relative;
+    float: left;
+
+}
+
+header nav ul li label,
+header nav ul li a{
+    padding: 15px;
+    color: var(--colorText);
+    font-size: 16px;
+    display: block;
+    width: 150px;
+    transition: .5s;
+}
+
+header nav ul li label:hover,
+header nav ul li a:hover{
+    background-color: var(--colorList);
+}
+
+header nav ul li ul{
+    position: absolute;
+    left: 0;
+    width: 180px;
+    background-color: var(--colorManu);
+    display: none;
+}
+
+header nav ul li ul li{
+    width: 100%;
+    top: 0;
+}
+
+header nav ul li:hover > ul{
+    display: initial;
+}
+
+header nav ul li .selected{
+    color: var(--colorSelected);
+    font-weight: 600;
+}

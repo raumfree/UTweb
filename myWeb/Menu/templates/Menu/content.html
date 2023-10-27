@@ -1,0 +1,9 @@
+{% extends 'Menu/base.html' %}
+{% load static %}
+
+{% block content %}
+<p>Категория - {{ SelectedCategory }}</p>
+<p>Пункт - {{ SelectedItem }}</p>
+<img src="{% static 'Menu/images/image.png' %}">
+
+{% endblock %}

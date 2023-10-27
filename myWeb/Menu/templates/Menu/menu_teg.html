@@ -1,0 +1,27 @@
+<header>
+    <a href="https://github.com/raumfree" class="logo">raumfree</a>
+    <nav>
+        <ul>
+            {% for category in categoryList %}
+                <li>
+                    <label class = "{% if SelectedCategory == category %}selected{% endif %}">{{category}}</label>
+                    <ul>
+                        {% for item in itemsMenu %}
+                            {% if item.cat == category%}
+                                {% if item.pk == SelectedItem %}
+                                    <li>
+                                        <label class="selected">{{item.item}}</label>
+                                    </li>
+                                {% else %}
+                                    <li>
+                                        <a href="{{item.get_url}}">{{item.item}}</a>
+                                    </li>
+                                {% endif %}
+                            {% endif %}
+                        {% endfor %}
+                    </ul>
+                </li>
+            {% endfor %}
+        </ul>
+    </nav>
+</header>

@@ -1,0 +1,19 @@
+{% load static %}
+{% load menu_tegs %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{{title}}</title>
+    <link type="text/css" href="{% static 'Menu/css/style.css' %}" rel="stylesheet">
+</head>
+<body>
+{% get_menu_teg SelectedItem SelectedCategory %}
+
+{% block content %}
+{% endblock %}
+
+
+</body>
+</html>
